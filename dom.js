@@ -38,14 +38,48 @@
 //     items[i].style.fontWeight='bold';
 // }
 
-var li=document.getElementsByTagName('li');
-console.log(li);
-li[0].textContent="My name";
-li[0].style.backgroundColor="green";
-for(var i=0;i<li.length;i++){
-    li[i].style.backgroundColor='Yellow';
+// var li=document.getElementsByTagName('li');
+// console.log(li);
+// li[0].textContent="My name";
+// li[0].style.backgroundColor="green";
+// for(var i=0;i<li.length;i++){
+//     li[i].style.backgroundColor='Yellow';
+// }
+
+
+//Query selector//
+
+// var header=document.querySelector('#main-header');
+// header.style.borderBottom ='solid 4px #ccc';
+// var input=document.querySelector('input');
+// input.value='Hello World';
+
+//  var submit=document.querySelector('input[type="submit"]')
+//  submit.value='send';
+
+//  var item=document.querySelector('.list-group-item');
+//  item.style.color='green';
+
+
+//  var lastitem=document.querySelector('.list-group-item:last-child');
+//  lastitem.style.color="red";
+
+ var seconditem=document.querySelector('.list-group-item:nth-child(2)');
+ seconditem.style.color="yellow";
+//  seconditem.style.backgroundColor='green';
+
+//  var thirditem=document.querySelector('.list-group-item:nth-child(3)');
+//  thirditem.style.visibility = "hidden";
+
+
+//Query selector all
+// var item=document.querySelectorAll('li');
+// console.log(item);
+// item[2].style.color='green';
+
+
+var odd=document.querySelectorAll('li:nth-child(odd)');
+for(i=0; i<odd.length;i++){
+    odd[i].style.backgroundColor='green';
 }
-
-
-
 
