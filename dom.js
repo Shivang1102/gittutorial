@@ -26,27 +26,25 @@
 // console.log(additem.textContent);
 // additem.style.color="green";
 // additem.style.fontWeight="bold";
-var items=document.getElementsByClassName("list-group-item");
-console.log(items);
-items[0].textContent="Hello1";
-items[1].textContent="Hello2";
-items[2].textContent="Hello3";
-items[3].textContent="Hello4";
+// var items=document.getElementsByClassName("list-group-item");
+// console.log(items);
+// items[0].textContent="Hello1";
+// items[1].textContent="Hello2";
+// items[2].textContent="Hello3";
+// items[3].textContent="Hello4";
 
-for(var i=0;i<items.length;i++){
-    items[i].style.backgroundColor="green";
-    items[i].style.fontWeight='bold';
+// for(var i=0;i<items.length;i++){
+//     items[i].style.backgroundColor="green";
+//     items[i].style.fontWeight='bold';
+// }
+
+var li=document.getElementsByTagName('li');
+console.log(li);
+li[0].textContent="My name";
+li[0].style.backgroundColor="green";
+for(var i=0;i<li.length;i++){
+    li[i].style.backgroundColor='Yellow';
 }
-
-// items[1].style.backgroundColor="green";
-// items[0].style.backgroundColor="green";
-// items[2].style.backgroundColor="green";
-
-
-// items[1].style.fontWeight='bold';
-// items[2].style.fontWeight='bold';
-// items[0].style.fontWeight='bold';
-// items[3].style.fontWeight='bold';
 
 
 
