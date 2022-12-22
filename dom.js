@@ -22,9 +22,32 @@
 // headertitle.innerHTML='<h3>Hello</h3>';
 // header.style.borderBottom="solid 3px #000";
 
-var additem= document.getElementById("Add");
-console.log(additem.textContent);
-additem.style.color="green";
-additem.style.fontWeight="bold";
+// var additem= document.getElementById("Add");
+// console.log(additem.textContent);
+// additem.style.color="green";
+// additem.style.fontWeight="bold";
+var items=document.getElementsByClassName("list-group-item");
+console.log(items);
+items[0].textContent="Hello1";
+items[1].textContent="Hello2";
+items[2].textContent="Hello3";
+items[3].textContent="Hello4";
+
+for(var i=0;i<items.length;i++){
+    items[i].style.backgroundColor="green";
+    items[i].style.fontWeight='bold';
+}
+
+// items[1].style.backgroundColor="green";
+// items[0].style.backgroundColor="green";
+// items[2].style.backgroundColor="green";
+
+
+// items[1].style.fontWeight='bold';
+// items[2].style.fontWeight='bold';
+// items[0].style.fontWeight='bold';
+// items[3].style.fontWeight='bold';
+
+
 
 
