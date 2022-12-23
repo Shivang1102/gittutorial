@@ -2,6 +2,7 @@ var form=document.getElementById('addForm');
 var itemList=document.getElementById('items');
 var filter=document.getElementById('filter');
 
+
 //form submit event
 form.addEventListener('submit' ,addItem);
 
@@ -21,8 +22,14 @@ function addItem(e){
     var li=document.createElement('li');
     //add class
     li.className='list-group-item';
+    
+    //second box
+    var nextitem=document.getElementById('item1').value;
+
     //addtext nodewith input value
     li.appendChild(document.createTextNode(newItem));
+    li.appendChild(document.createTextNode(' '+nextitem));
+    
 
     //create deletebtn element
     var deletebtn=document.createElement('button');
@@ -30,10 +37,20 @@ function addItem(e){
     deletebtn.className='btn btn-danger btn-sm float-right delete';
     //add text
     deletebtn.appendChild(document.createTextNode('X'));
+    var editbutton=document.createElement('button');
+editbutton.className='btn btn-primary btn-sm float-right ';
+editbutton.appendChild(document.createTextNode('Edit'));
+
+
+    
     li.appendChild(deletebtn);
+    li.appendChild(editbutton);
+    
 
     itemList.appendChild(li);
 
+
+    
 
 }
 
@@ -58,7 +75,8 @@ function filterItems(e) {
    //convert to array
    Array.from(item).forEach(function(item){
     var itemName=item.firstChild.textContent;
-   if(itemName.toLowerCase().indexOf(text)!=-1){
+    var decb=item.childNodes[1].textContent;
+    if(itemName.toLowerCase().indexOf(text)!=-1 || decb.toLowerCase().indexOf(text)!=-1){
     item.style.display='block';
    }
    else{
@@ -70,11 +88,21 @@ function filterItems(e) {
 // var editbutton=document.createElement('button');
 // editbutton.className='btn btn-danger btn-sm float-right delete';
 // editbutton.appendChild(document.createTextNode('Edit'));
-console.log(editbutton);
+
 var li=document.getElementsByTagName('li');
 for(var i=0;i<li.length;i++){
     var editbutton=document.createElement('button');
-editbutton.className='btn btn-danger btn-sm float-right ';
+editbutton.className='btn btn-primary btn-sm float-right ';
 editbutton.appendChild(document.createTextNode('Edit'));
     li[i].appendChild(editbutton);
 }
+
+
+//addind new decsribtion
+
+// var box=document.getElementById('addForm')
+// var decribtion=document.createElement('input');
+// decribtion.className='form-control mr-2 ';
+// decribtion.id='item1';
+// decribtion.setAttribute('type','text');
+// box.appendChild(decribtion);
