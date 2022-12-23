@@ -4,5 +4,10 @@ function additem(e){
     e.preventDefault();
     var user=document.getElementById('name').value;
     var keyvale=document.getElementById('email').value;
-    localStorage.setItem(user,keyvale);
+    var details={
+        user ,
+        keyvale
+    }
+    
+    localStorage.setItem(user,JSON.stringify(details));
 }
